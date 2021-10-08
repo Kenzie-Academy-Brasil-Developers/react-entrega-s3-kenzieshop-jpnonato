@@ -7,8 +7,12 @@ export default function CartListReducer(state = list, action){
     switch (action.type) {
         case "@addCart":
             const item = action.payload
-            item.id = Math.random() * (10000 - 4) + 4
-            return[...state, item];
+            const newId = Math.random() * (10000 - 4) + 4
+           
+            return[...state, {
+                ...item,
+                id: newId
+            }];
 
         case "@removeCart":
             const selectedList = action.payload

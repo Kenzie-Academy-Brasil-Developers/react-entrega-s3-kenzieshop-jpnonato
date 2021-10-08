@@ -20,7 +20,6 @@ export const  removeCartlistThunk = (idd) => (dispatch,getStore) => {
 
   
    const cart = cartList.filter((elt) =>{ 
-      console.log(elt.id , idd)
      
       return elt.id !== idd
    
